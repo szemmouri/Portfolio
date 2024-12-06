@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: black;
+  --secondary: rgb(24, 24, 27);
+  --border: rgb(63, 63, 70, 0.4);
+  --title: rgb(255, 255, 255);
+  --subtitle: rgb(161, 161, 170);
+
+  --bgHeader: rgb(39, 39, 42);
+  --blue: rgb(93, 188, 252);
+  --icon-hover: #d4d4d8;
+
+  --divid-padding: 4rem;
+}
+
+.light {
+  --primary: rgb(250, 250, 250);
+  --secondary: rgb(255, 255, 255);
+  --border: rgba(202, 202, 202, 0.518);
+
+  --title: rgb(39 39 42);
+  --subtitle: rgb(82 82 91);
+
+  --bgHeader: rgb(253, 253, 253);
+  --blue: rgb(0, 149, 246);
+
+  --icon-hover: #333;
+}
+body {
+  background-color: var(--primary);
+  color: white;
+}
+
+.container {
+  border: 2px solid var(--border);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--secondary);
+  padding: 0 4rem;
+}
+
+.divider {
+  border: 1px solid var(--border);
+  margin: 3rem 0;
+  width: calc(100% + var(--divid-padding) + var(--divid-padding));
+  margin-left: calc(var(--divid-padding) * -1);
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+.flex {
+  display: flex;
+}
+button:active {
+  scale: 0.9;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    --divid-padding: 1.5rem;
+    width: 90%;
+    padding: 0 var(--divid-padding);
+  }
+  .divider {
+    width: calc(100% + var(--divid-padding) + var(--divid-padding));
+    margin-left: calc(var(--divid-padding) * -1);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 0 var(--divid-padding);
+  }
+}
+
+/* scrool */
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* scrooll to top */
+.scroll2top {
+  position: fixed;
+  bottom: 2rem;
+  right: 3%;
+  color: white;
+  background-color: var(--blue);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.scroll2top:hover {
+  background-color: rgb(27, 156, 242);
+}

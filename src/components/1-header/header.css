@@ -1,0 +1,136 @@
+header nav ul.flex {
+  gap: 16px;
+}
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+header button {
+  font-size: 1.2rem;
+}
+header.flex {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1rem;
+}
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
+  -ms-border-radius: 55px;
+  -o-border-radius: 55px;
+}
+
+header .menu {
+  display: none;
+}
+
+/* PopUp nav */
+header .fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(64, 64, 64, 0.8);
+}
+
+@keyframes smothMove {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+header .fixed ul.modal {
+  animation: smothMove 0.7s 1;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  -webkit-animation: smothMove 0.7s 1;
+}
+header .fixed ul.modal li {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.8rem;
+  padding-top: 0.5rem;
+}
+header .fixed ul.modal li:last-child {
+  border: none;
+}
+header .fixed ul.modal li:first-child {
+  text-align: right;
+  padding-bottom: 0;
+  padding-top: 0.2rem;
+  border: none;
+}
+header .fixed ul.modal li a {
+  font-size: 1rem;
+}
+@media (max-width: 700px) {
+  header.flex nav {
+    display: none;
+  }
+
+  header .menu {
+    display: block;
+  }
+}
+
+.border {
+  border: 2px solid red;
+}
+
+button {
+  all: unset;
+}
+
+/* Button Icon */
+.circle-btn {
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--bgHeader);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 165, 96, 0.2);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.circle-btn:hover {
+  color: var(--title);
+  border: 1px solid rgb(244, 165, 96);
+}

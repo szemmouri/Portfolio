@@ -1,0 +1,114 @@
+.contact-us .icon {
+  color: var(--subtitle);
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+.contact-us .title {
+  font-size: 2.1rem;
+  color: var(--title);
+  margin-bottom: 1rem;
+}
+.contact-us .subtitle {
+  color: var(--subtitle);
+  margin-bottom: 2rem;
+  line-height: 1.65rem;
+}
+
+.contact-us label {
+  color: var(--subtitle);
+}
+.contact-us .msglabel {
+  align-self: center;
+}
+.contact-us #email,
+.contact-us #message {
+  all: unset;
+  background-color: rgba(63, 63, 70, 0.15);
+  border: 1px solid rgb(63, 63, 70);
+  width: 16rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-size: 1.1rem;
+}
+.light .contact-us #email,
+.light .contact-us #message {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgb(128, 128, 128, 0.45);
+  box-shadow: 1px 1px 1px rgba(73, 73, 75, 0.1);
+  color: #232324;
+}
+.contact-us #message {
+  min-height: 9rem;
+  resize: vertical;
+}
+.contact-us #email:focus,
+.contact-us #message:focus {
+  border: 1px solid rgb(45, 212, 191);
+}
+.light .contact-us #email:focus,
+.light .contact-us #message:focus {
+  border: 1px solid rgb(78, 78, 80);
+}
+.contact-us .submit {
+  cursor: pointer;
+  background-color: rgba(35, 37, 45, 1);
+  padding: 0.75rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  border: 1px solid rgb(63, 63, 70);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.contact-us .submit:hover {
+  scale: 0.95;
+}
+
+@media (max-width: 600px) {
+  .contact-us .animation {
+    display: none;
+  }
+  .contact-us form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .contact-us div.flex {
+    flex-direction: column;
+    align-items: start;
+  }
+  .contact-us .msglabel {
+    align-self: flex-start;
+  }
+  .contact-us #email,
+  .contact-us #message {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem 0 0.7rem 0.5rem;
+
+    margin-left: 0;
+  }
+  .contact-us .submit {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .contact-us .contact-animation {
+    display: none;
+  }
+}
